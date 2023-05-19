@@ -13,3 +13,6 @@ transform: rotate(180deg);
 .active{
     color: #EA1662;
 }
+.menu, .logo-text{
+  font-family:  'baloo paaji';
+}
