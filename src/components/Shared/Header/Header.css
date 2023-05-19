@@ -19,7 +19,9 @@
 .logo-text {
   font-family: 'baloo paaji';
 }
-
+.drop-menu a{
+  transition: all .3s ease;
+}
 .drop-menu a:hover {
   padding: 4px 6px;
   background-color: rgb(228, 228, 228);

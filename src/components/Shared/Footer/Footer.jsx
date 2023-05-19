@@ -52,16 +52,16 @@ const Footer = () => {
                                 <span>you123@toytown.com</span>
                             </div>
                             <div className='flex items-center justify-center gap-1 border border-slate-400 py-2 px-2 rounded-full'>
-                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#FF6F69] transition-all duration-300'>
+                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#EA1662] transition-all duration-300'>
                                     <FaFacebookF/>
                                 </span>
-                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#FF6F69] transition-all duration-300'>
+                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#EA1662] transition-all duration-300'>
                                     <FaLinkedinIn/>
                                 </span>
-                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#FF6F69] transition-all duration-300'>
+                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#EA1662] transition-all duration-300'>
                                     <FaGoogle/>
                                 </span>
-                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#FF6F69] transition-all duration-300'>
+                                <span className='flex items-center justify-center w-[40px] h-[40px] rounded-full border border-slate-500 hover:text-white hover:bg-[#EA1662] transition-all duration-300'>
                                     <FaPinterestP/>
                                 </span>
                             </div>
