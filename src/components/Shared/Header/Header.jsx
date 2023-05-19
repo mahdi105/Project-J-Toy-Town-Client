@@ -65,7 +65,7 @@ const Header = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                             </label>
                              {/* Drop Down menu*/}
-                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 py-2 px-3">
+                            <ul tabIndex={0} className="menu drop-menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 py-2 px-3">
                                 <NavLink to="/" className={`${({ isActive }) => isActive ? "active" : ""}`}>Home</NavLink>
                                 <NavLink to="/" className={`${({ isActive }) => isActive ? "active" : ""}`}>All Toys</NavLink>
                                 <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>My Toys</NavLink>
@@ -74,7 +74,7 @@ const Header = () => {
                                 <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>Login</NavLink>
                                 <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>Register</NavLink>
                                 {/* Logout Button */}
-                                <button className='md:hidden mt-3 bg-[#FF6F69] rounded-full py-1 px-6 text-white font-light flex items-center gap-2 hover:bg-[#993a36] transition-all duration-300'><span>Logout</span><FaSignOutAlt /></button>
+                                <button className='md:hidden mt-3 bg-[#FF6F69] rounded-full py-1 px-4 text-white font-light flex items-center justify-center gap-2 hover:bg-[#993a36] transition-all duration-300'><span>Logout</span><FaSignOutAlt /></button>
                             </ul>
                         </div>
                         <Link to='/' className="logo-text btn btn-ghost normal-case text-xl">Toy Town</Link>
