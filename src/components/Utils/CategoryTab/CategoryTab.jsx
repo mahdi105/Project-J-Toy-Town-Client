@@ -52,6 +52,9 @@ const CategoryTab = () => {
                                 :
                                 ''
                         }
+                        {
+                            toys.length === 0 ? <button className="btn loading">loading</button>: ''
+                        }
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -62,6 +65,9 @@ const CategoryTab = () => {
                                 :
                                 ''
                         }
+                        {
+                            toys.length === 0 ? <button className="btn loading">loading</button>: ''
+                        }
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -71,6 +77,9 @@ const CategoryTab = () => {
                                 toys.map(toy => <ToyCardHome key={toy._id} toy={toy}></ToyCardHome>)
                                 :
                                 ''
+                        }
+                        {
+                            toys.length === 0 ? <button className="btn loading">loading</button>: ''
                         }
                     </div>
                 </TabPanel>

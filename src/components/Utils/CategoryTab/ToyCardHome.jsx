@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating';
+import { Link } from 'react-router-dom';
 
 const ToyCardHome = ({ toy }) => {
     const { name, image, price, rating, _id } = toy;
@@ -20,7 +21,7 @@ const ToyCardHome = ({ toy }) => {
                     />
                 </div>
                 <div className="card-actions justify-start">
-                    <button className="btn bg-[#EA1662] border-none shadow-lg">View details</button>
+                    <Link to={`/toy/${_id}`}  className="btn bg-[#EA1662] border-none shadow-lg">View details</Link>
                 </div>
             </div>
         </div>
