@@ -10,10 +10,10 @@ const Gallery = () => {
         .then(error => console.log(error.message))
     },[])
     return (
-        <section className='container mx-auto bg-gray-50 px-2 md:px-0 lg:px-10 py-16'>
+        <section className='container mx-auto bg-[#f5f9f9] px-2 md:px-0 lg:px-10 py-16'>
             <h2 className='heading text-[36px] text-center'>Toys Gallery</h2>
             <div className="divider w-4/12 mx-auto mb-16">
-                <img src={truck} className='w-[65px] h-[65px]' alt="" />
+                <img src={truck} className='w-[65px] h-[65px] rounded-full' alt="" />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
                 {
