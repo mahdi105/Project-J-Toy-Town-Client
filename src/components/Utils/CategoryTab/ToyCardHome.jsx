@@ -21,7 +21,7 @@ const ToyCardHome = ({ toy }) => {
                     />
                 </div>
                 <div className="card-actions justify-start">
-                    <Link to={`/toy/${_id}`}  className="btn bg-[#EA1662] border-none shadow-lg">View details</Link>
+                    <Link to={`/toy/${_id}`}  className="py-2 px-4 rounded-full text-white bg-[#09CCD0] shadow-lg hover:bg-white border-2 transition-all duration-300 hover:border-[#09CCD0] hover:text-black">View details</Link>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ const Gallery = () => {
         fetch('http://localhost:5000/gallery')
         .then(res => res.json())
         .then(data => setGallery(data))
-        .then(error => console.log(error.message))
+        .catch(error => console.log(error.message))
     },[])
     return (
         <section className='container mx-auto bg-[#f5f9f9] px-2 md:px-0 lg:px-10 py-16'>
