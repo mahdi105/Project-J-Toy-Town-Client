@@ -8,8 +8,8 @@ import truck from "/images/truck.gif"
 const Policy = () => {
     return (
         <section className='container mx-auto bg-[#fee3e2] px-2 md:px-0 lg:px-10 py-16'>
-            <h2 className='heading text-[36px] text-center mb-1'>Our Business Policy</h2>
-            <div className="divider w-4/12 mx-auto mb-16">
+            <h2 className='heading text-[26px] md:text-[36px] text-center mb-1'>Our Business Policy</h2>
+            <div className="divider w-full md:w-4/12 mx-auto mb-16">
                 <img src={truck} className='w-[45px] h-[45px] rounded-full' alt="" />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-10'>
