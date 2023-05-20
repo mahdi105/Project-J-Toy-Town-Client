@@ -45,7 +45,7 @@ const CategoryTab = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-6'>
                         {
                             category === 'Classic Car' ?
                                 toys.map(toy => <ToyCardHome key={toy._id} toy={toy}></ToyCardHome>)
@@ -55,7 +55,7 @@ const CategoryTab = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-6'>
                         {
                             category === 'Sedan' ?
                                 toys.map(toy => <ToyCardHome key={toy._id} toy={toy}></ToyCardHome>)
@@ -65,7 +65,7 @@ const CategoryTab = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-6'>
                         {
                             category === 'Sports Car' ?
                                 toys.map(toy => <ToyCardHome key={toy._id} toy={toy}></ToyCardHome>)
