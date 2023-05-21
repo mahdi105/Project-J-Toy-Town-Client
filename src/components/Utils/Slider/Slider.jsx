@@ -10,9 +10,16 @@ import './Slider.css'
 import classic from '/images/classic.png'
 import sedan from '/images/sedan.png'
 import sports from '/images/sports.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Slider = () => {
+    const effect = () => {
+        AOS.init({ once: false });
+        AOS.refresh();
+    }
+    effect();
     return (
         <Swiper
             effect="fade"
@@ -28,13 +35,13 @@ const Slider = () => {
                 <div className='bg-[#e9f6f8]'>
                     <div className="md:flex items-center justify-between swiper-slide-content container mx-auto px-2 md:px-0 lg:px-20 py-16">
                         <div>
-                            <img src={classic} className='w-[200px] md:w-[450px] mx-auto mb-2 md:mb-0' alt="" />
+                            <img data-aos="zoom-in" data-aos-once="false" data-aos-duration="800" data-aos-easing="ease-in-out" src={classic} className='w-[200px] md:w-[450px] mx-auto mb-2 md:mb-0' alt="" />
                         </div>
                         <div className="slide-content px-10">
-                            <p className='tagline text-[18px] md:text-[36px] text-[#FF6F69] mb-[.5rem]'>Hot & Trendy</p>
-                            <h2 className='heading text-[24px] md:text-[62px] leading-[30px] md:leading-[70px] font-[600] mb-4'>Most Amazing Classic Toys</h2>
-                            <p className='discount capitalize text-[15px] text-[#666666] mb-[1.8rem]'>Get upto 30% off on your first order</p>
-                            <button className='uppercase text-white border border-transparent hover:text-black hover:bg-white hover:border-[#09CCD0] py-2 px-4 rounded-full bg-[#09CCD0] transition-all duration-300'>Shop Now</button>
+                            <p data-aos="fade-down" data-aos-once="false" data-aos-duration="800" data-aos-easing="ease-in-out" className='tagline text-[18px] md:text-[36px] text-[#FF6F69] mb-[.5rem]'>Hot & Trendy</p>
+                            <h2 data-aos="fade-left" data-aos-once="false" data-aos-duration="800" data-aos-easing="ease-in-out" className='heading text-[24px] md:text-[62px] leading-[30px] md:leading-[70px] font-[600] mb-4'>Most Amazing Classic Toys</h2>
+                            <p data-aos="zoom-in" data-aos-once="false" data-aos-duration="400" data-aos-easing="ease-in-out" className='discount capitalize text-[15px] text-[#666666] mb-[1.8rem]'>Get upto 30% off on your first order</p>
+                            <button data-aos="zoom-out-left" data-aos-once="false" data-aos-duration="400" data-aos-easing="ease-in-out" className='uppercase text-white border border-transparent hover:text-black hover:bg-white hover:border-[#09CCD0] py-2 px-4 rounded-full bg-[#09CCD0] transition-all duration-300'>Shop Now</button>
                         </div>
                     </div>
                 </div>

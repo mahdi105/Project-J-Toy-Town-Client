@@ -4,11 +4,12 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './Routes/Routes'
 import '@smastrom/react-rating/style.css'
+import AuthProvider from './AuthProvider/AuthProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='overflow-scroll'>
-    <React.StrictMode>
+  <React.StrictMode>
+    <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
-    </React.StrictMode>
-  </div>,
+    </AuthProvider>
+  </React.StrictMode>,
 )
