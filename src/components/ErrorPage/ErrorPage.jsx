@@ -1,10 +1,7 @@
 import React, { forwardRef, useEffect, useRef } from 'react';
 import Lottie from 'lottie-react';
-import errorImage from '../../../public/error.json';
+import errorImage from '../../assets/error.json';
 import { Link, useRouteError } from 'react-router-dom';
-
-
-
 
 const LottieAnimation = forwardRef((props, ref) => {
     const animationRef = useRef(null);

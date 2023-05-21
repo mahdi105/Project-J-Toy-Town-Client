@@ -9,7 +9,7 @@ const notifyError = (error) => toast.error(error.message);
 const Login = () => {
     const {logIn} = useContext(authContext);
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    const destination = location.state?.from?.pathname || '/';
     const navigate = useNavigate();
     const handleLogin = (event) => {
         event.preventDefault()
@@ -21,7 +21,7 @@ const Login = () => {
             .then(result => {
                 form.reset();
                 notifySucces();
-                navigate(from, {replace:true});
+                navigate(destination, {replace:true});
             })
             .catch(error => notifyError(error))
     }
