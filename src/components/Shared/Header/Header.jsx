@@ -67,10 +67,10 @@ const Header = () => {
                              {/* Drop Down menu*/}
                             <ul tabIndex={0} className="menu drop-menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 py-2 px-3">
                                 <NavLink to="/" className={`${({ isActive }) => isActive ? "active" : ""}`}>Home</NavLink>
-                                <NavLink to="/" className={`${({ isActive }) => isActive ? "active" : ""}`}>All Toys</NavLink>
-                                <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>My Toys</NavLink>
-                                <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>Add a toy</NavLink>
-                                <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>Blogs</NavLink>
+                                <NavLink to="/allToys" className={`${({ isActive }) => isActive ? "active" : ""}`}>All Toys</NavLink>
+                                <NavLink to="/myToys" className={`${({ isActive }) => isActive ? "active" : ""}`}>My Toys</NavLink>
+                                <NavLink to="/addAtoy" className={`${({ isActive }) => isActive ? "active" : ""}`}>Add a toy</NavLink>
+                                <NavLink to="/blog" className={`${({ isActive }) => isActive ? "active" : ""}`}>Blogs</NavLink>
                                 <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>Login</NavLink>
                                 <NavLink to="/home" className={`${({ isActive }) => isActive ? "active" : ""}`}>Register</NavLink>
                                 {/* Logout Button */}
@@ -82,12 +82,12 @@ const Header = () => {
                     <div className="navbar-center hidden lg:flex ">
                         <nav className="menu menu-horizontal px-1 flex gap-4 text-white">
                             <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
-                            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>All Toys</NavLink>
-                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>My Toys</NavLink>
-                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Add a toy</NavLink>
-                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Blogs</NavLink>
-                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Login</NavLink>
-                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Register</NavLink>
+                            <NavLink to="/allToys" className={({ isActive }) => isActive ? "active" : ""}>All Toys</NavLink>
+                            <NavLink to="/myToys" className={({ isActive }) => isActive ? "active" : ""}>My Toys</NavLink>
+                            <NavLink to="/addAtoy" className={({ isActive }) => isActive ? "active" : ""}>Add a toy</NavLink>
+                            <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}>Blogs</NavLink>
+                            <NavLink to="/login" className={({ isActive }) => isActive ? "active" : ""}>Login</NavLink>
+                            <NavLink to="/register" className={({ isActive }) => isActive ? "active" : ""}>Register</NavLink>
                         </nav>
                     </div>
                     <div className="navbar-end flex items-center gap-x-3">

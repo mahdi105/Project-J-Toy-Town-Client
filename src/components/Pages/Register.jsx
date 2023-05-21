@@ -2,28 +2,49 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../../AuthProvider/AuthProvider';
 import ThirdPartyLogin from './ThirdPartyLogin';
+import { toast } from 'react-hot-toast';
+import { updateProfile } from 'firebase/auth';
 
+const notifySucces = () => toast.success('Registration Successfull, please login');
+const notifyWarning = (error) => toast.error(error.message)
 const Register = () => {
-    const { createUser } = useContext(authContext);
+    const { createUser, logOut, user } = useContext(authContext);
+    const handleLogout = ()=>{
+        logOut()
+        .then(()=> {})
+        .catch(error => notifyWarning(error))
+    }
+    // Add User Name and Photo URL while registration
+    const handleUpdateProfile = (cUser, userName, photo )=>{
+        updateProfile(cUser, {
+            displayName: userName,
+            photoURL: photo || null
+        })
+        .then(() =>{})
+        .catch(error => notifyWarning(error));
+    }
     const navigate = useNavigate();
     const handleRegister = (event) => {
         event.preventDefault()
         const form = event.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const confirm = form.confirm.value;
+        const photoUrl = form.photo.value;
         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(password)) {
             alert('Password must contain at least Uppercase letter, Lowercase letter, number, special character and minimum 6 characters');
             return;
         };
         createUser(email, password)
             .then(result => {
-                form.reset()
-                alert('Registration successfull');
+                const user = result.user;
+                form.reset();
+                notifySucces();
+                handleLogout();
+                handleUpdateProfile(user, name, photoUrl);
                 navigate('/login');
             })
-            .catch(error => console.log(error.message))
-
+            .catch(error => notifyWarning(error))
     }
     return (
         <main>
@@ -52,6 +73,12 @@ const Register = () => {
                                         <span className="label-text">Password</span>
                                     </label>
                                     <input type="password" placeholder="password" name='password' className="input input-bordered" required/>
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Photo URL</span>
+                                    </label>
+                                    <input type="text" placeholder="https://abc.png/jpg/webp" name='photo' className="input input-bordered" />
                                 </div>
                                 <div className="form-control mt-6">
                                     <button type='submit' className="btn btn-primary">Sign Up</button>
