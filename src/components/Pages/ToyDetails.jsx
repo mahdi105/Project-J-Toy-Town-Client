@@ -10,7 +10,7 @@ const ToyDetails = () => {
         <section className='container mx-auto bg-white px-2 md:px-0 lg:px-10 py-16'>
             <div className='w-7/12 mx-auto shadow-lg p-5 rounded-lg'>
                 {/* F1 */}
-                <div className='flex justify-center gap-6 mb-5'>
+                <div className='flex justify-center gap-6 mb-5 rounded-md shadow-md p-5'>
                     <div >
                         <img src={image} alt="" />
                     </div>
