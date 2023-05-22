@@ -1,5 +1,5 @@
 ## Live Link
-* Hosted In Firebase -> [Live Site]()
+* Hosted In Firebase -> [Live Site](https://toy-town-fc89b.firebaseapp.com/)
 
 ## Third Party Assets
 * 404 Page Animation [LottieFiles](https://lottiefiles.com/98642-error-404)

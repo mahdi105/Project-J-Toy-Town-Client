@@ -12,7 +12,7 @@ const MyToys = () => {
     const { user } = useContext(authContext);
     useTitle('My Toys')
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?email=${user ? user.email : ''}`)
+        fetch(`https://toy-town-server-mahdi105.vercel.app/toys?email=${user ? user.email : ''}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -25,7 +25,7 @@ const MyToys = () => {
     const handleDelete = (id) => {
         const proceed = confirm('Are you sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/toy/${id}`, {
+            fetch(`https://toy-town-server-mahdi105.vercel.app/toy/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -40,7 +40,7 @@ const MyToys = () => {
         }
     }
     const handleItemsOrder = (order) => {
-        fetch(`http://localhost:5000/toys?sortOrder=${order}&email=${user ? user.email : ''}`)
+        fetch(`https://toy-town-server-mahdi105.vercel.app/toys?sortOrder=${order}&email=${user ? user.email : ''}`)
         .then(res => res.json())
         .then(data => {
             setToys(data);

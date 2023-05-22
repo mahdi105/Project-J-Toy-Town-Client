@@ -15,7 +15,7 @@ const AllToys = () => {
         event.preventDefault();
         const form = event.target;
         const searchString = form.search.value;
-        fetch(`http://localhost:5000/toys?name=${searchString}`)
+        fetch(`https://toy-town-server-mahdi105.vercel.app/toys?name=${searchString}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -24,7 +24,7 @@ const AllToys = () => {
             .catch(error => notifyError(error));
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?limit=${limit}`)
+        fetch(`https://toy-town-server-mahdi105.vercel.app/toys?limit=${limit}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);

@@ -11,7 +11,7 @@ const CategoryTab = () => {
     const [toys, setToys] = useState([]);
     const [category, setCategory] = useState('Classic Car');
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?category=${category}`)
+        fetch(`https://toy-town-server-mahdi105.vercel.app/toys?category=${category}`)
             .then(res => res.json())
             .then(data => setToys(data))
             .catch(error => console.log(error.message))

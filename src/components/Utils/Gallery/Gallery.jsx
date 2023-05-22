@@ -12,7 +12,7 @@ const Gallery = () => {
     }
     effect();
     useEffect(() => {
-        fetch('http://localhost:5000/gallery')
+        fetch('https://toy-town-server-mahdi105.vercel.app/gallery')
             .then(res => res.json())
             .then(data => setGallery(data))
             .catch(error => console.log(error.message))
