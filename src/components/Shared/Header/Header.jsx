@@ -109,7 +109,11 @@ const Header = () => {
                     </div>
                     <div className="navbar-end flex items-center gap-x-3">
                         <button onClick={handleLogOut} className='hidden bg-[#FF6F69] rounded-full py-1 px-6 text-white font-light md:flex items-center gap-2 hover:bg-[#993a36] transition-all duration-300'><span>Logout</span><FaSignOutAlt /></button>
-                        <img title={user !== null ? user.displayName : ''} className='w-[40px] h-[40px] rounded-full border border-slate-300' src={user !== null ? user.photoURL : ''} alt="M" />
+                        {
+                            user ? <img title={user !== null ? user.displayName : ''} className='w-[40px] h-[40px] rounded-full border border-slate-300' src={user !== null ? user.photoURL : ''} alt="M" />
+                            :
+                            <Link to="/login" >Login</Link>
+                        }
                     </div>
                 </div>
             </section>
