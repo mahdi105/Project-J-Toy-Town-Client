@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { FaSearch } from "react-icons/fa";
 import AllTableRow from '../Utils/AllTableRow/AllTableRow';
+import useTitle from '../../Hooks/useTitle';
 
 const notifyError = (error) => toast.error(error.message);
 const notify = (string) => toast.success(string)
@@ -9,6 +10,7 @@ const AllToys = () => {
     const [toys, setToys] = useState([]);
     const [enable, setEnable] = useState(true);
     const [limit, setLimit] = useState(20);
+    useTitle('All Toys')
     const handleSearch = (event) => {
         event.preventDefault();
         const form = event.target;

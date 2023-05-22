@@ -3,6 +3,7 @@ import { authContext } from '../../AuthProvider/AuthProvider';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ThirdPartyLogin from './ThirdPartyLogin';
+import useTitle from '../../Hooks/useTitle';
 
 const notifySucces = () => toast.success('Login Successful');
 const notifyError = (error) => toast.error(error.message);
@@ -11,6 +12,7 @@ const Login = () => {
     const location = useLocation();
     const destination = location.state?.from?.pathname || '/';
     const navigate = useNavigate();
+    useTitle('Login')
     const handleLogin = (event) => {
         event.preventDefault()
         const form = event.target;

@@ -2,10 +2,12 @@ import { Rating } from '@smastrom/react-rating';
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { authContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const ToyDetails = () => {
     const {user} = useContext(authContext);
     const toyDetails = useLoaderData();
+    useTitle('Details')
     const { _id, category, description, image, name, price, rating, quantity, seller } = toyDetails;
     return (
         <section className='container mx-auto bg-white px-2 md:px-0 lg:px-10 py-16'>

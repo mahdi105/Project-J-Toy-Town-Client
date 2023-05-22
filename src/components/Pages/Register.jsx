@@ -4,10 +4,12 @@ import { authContext } from '../../AuthProvider/AuthProvider';
 import ThirdPartyLogin from './ThirdPartyLogin';
 import { toast } from 'react-hot-toast';
 import { updateProfile } from 'firebase/auth';
+import useTitle from '../../Hooks/useTitle';
 
 const notifySucces = () => toast.success('Registration Successfull, please login');
 const notifyWarning = (error) => toast.error(error.message)
 const Register = () => {
+    useTitle('Register')
     const { createUser, logOut, user } = useContext(authContext);
     const handleLogout = ()=>{
         logOut()

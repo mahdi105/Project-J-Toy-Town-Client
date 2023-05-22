@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import UniqueTableRow from '../Utils/UniqueTableRow/UniqueTableRow';
 import { authContext } from '../../AuthProvider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import useTitle from '../../Hooks/useTitle';
 
 
 const notify = (string) => toast.success(string);
@@ -9,6 +10,7 @@ const notifyError = (error) => toast.error(error);
 const MyToys = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(authContext);
+    useTitle('My Toys')
     useEffect(() => {
         fetch(`http://localhost:5000/toys?email=${user ? user.email : ''}`)
             .then(res => res.json())
