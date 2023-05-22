@@ -29,7 +29,7 @@ const Login = () => {
         <main>
             <div className="hero min-h-screen bg-base-200 py-24">
                 <div className="hero-content flex justify-center items-center">
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-[450px] shadow-2xl bg-base-100">
                         <div className="card-body">
                             <h1 className="text-5xl font-bold">Login Now</h1>
 

@@ -37,10 +37,24 @@ const MyToys = () => {
                 .catch(error => notifyError(error.message));
         }
     }
+    const handleItemsOrder = (order) => {
+        fetch(`http://localhost:5000/toys?sortOrder=${order}&email=${user ? user.email : ''}`)
+        .then(res => res.json())
+        .then(data => {
+            setToys(data);
+            notify(`Sorted in ${order}`)
+        })
+        .catch(error => notifyError(error.message));
+    }
     return (
         <section className='container mx-auto px-2 md:px-0 lg:px-10 py-10'>
             <div className='py-4'>
                 <h2 className='py-2 text-[27px]' style={{ fontFamily: 'baloo paaji' }}>All My Toys</h2>
+            </div>
+            <div>
+                <h2 className='mb-1'>Sort by price:</h2>
+                <button onClick={()=> handleItemsOrder('asc')} className='py-2 px-3 bg-red-500 hover:bg-red-700 text-white mr-3'>Ascending</button>
+                <button onClick={()=> handleItemsOrder('desc')} className='py-2 px-3 bg-red-500 hover:bg-red-700 text-white'>Discending</button>
             </div>
             <div>
                 <div className="overflow-x-auto w-full">

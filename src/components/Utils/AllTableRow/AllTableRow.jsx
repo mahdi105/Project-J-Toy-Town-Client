@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AllTableRow = ({toy}) => {
-    const {_id, image, name, category, seller, price, quantity} = toy;
+    const {_id, image, name, category, seller, price} = toy;
     return (
         <tr>
             <td>
@@ -14,7 +14,7 @@ const AllTableRow = ({toy}) => {
                     </div>
                     <div>
                         <h2 className="font-bold">{name}</h2>
-                        <p className="text-sm opacity-50">Seller: {seller.name}</p>
+                        <h3 className="text-sm opacity-50">{seller?.name}</h3>
                     </div>
                 </div>
             </td>
